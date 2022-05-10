@@ -102,7 +102,7 @@ void vioInit (void) {
 #endif
 }
 
-// Print formated string to test terminal.
+// Print formatted string to test terminal.
 int32_t vioPrint (uint32_t level, const char *format, ...) {
   va_list args;
   int32_t ret;
@@ -166,7 +166,7 @@ uint32_t vioGetSignal (uint32_t mask) {
 #if !defined CMSIS_VIN
   // Get input signals from buttons (only USER button)
   if ((mask & vioBUTTON0) != 0U) {
-    if (BSP_PB_GetState(BUTTON_USER) == 1U) {
+    if (BSP_PB_GetState(BUTTON_USER) != 1U) {
       vioSignalIn |=  vioBUTTON0;
     } else {
       vioSignalIn &= ~vioBUTTON0;
