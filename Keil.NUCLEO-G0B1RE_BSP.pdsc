@@ -7,8 +7,16 @@
   <repository type="git">https://github.com/MDK-Packs/NUCLEO-G0B1RE_BSP.git</repository>
 
   <releases>
-    <release version="0.0.1-dev0">
-      Initial version
+    <release version="1.0.0" date="2022-05-11">
+      Board description and documentation for NUCLEO-STM32G0B1RE
+      Synchronize with Keil:STM32G0xx_DFP.1.4.0
+      CMSIS:
+      - CMSIS-VIO driver
+      Drivers:
+      - Board Drivers, Components, Config files
+      Example projects:
+      - CMSIS-RTOS2 Blinky (verify the basic tool setup)
+      - CMSIS-RTOS2 Platform (configure the board hardware)
     </release>
   </releases>
 
