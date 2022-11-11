@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd" schemaVersion="1.7.2">
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd" schemaVersion="1.7.7">
   <name>NUCLEO-G0B1RE_BSP</name>
   <vendor>Keil</vendor>
   <description>STMicroelectronics STM32G0 Series NUCLEO-G0B1RE Board Support Pack</description>
@@ -7,6 +7,11 @@
   <repository type="git">https://github.com/MDK-Packs/NUCLEO-G0B1RE_BSP.git</repository>
 
   <releases>
+    <release version="1.0.1-dev0">
+      Drivers:
+      - CMSIS-Driver VIO:
+      -- Correct variables initialization to avoid compiler warnings
+    </release>
     <release version="1.0.0" date="2022-05-11">
       Board description and documentation for NUCLEO-STM32G0B1RE
       Synchronize with Keil:STM32G0xx_DFP.1.4.0
@@ -73,7 +78,7 @@
     </bundle>
 
     <!-- VIO component for NUCLEO-G0B1RE -->
-    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant= "NUCLEO-G0B1RE" Cversion="1.0.0" Capiversion="0.1.0" condition="NUCLEO-G0B1RE VIO">
+    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant= "NUCLEO-G0B1RE" Cversion="1.0.1" Capiversion="0.1.0" condition="NUCLEO-G0B1RE VIO">
       <description>Virtual I/O implementation for NUCLEO-G0B1RE</description>
       <RTE_Components_h>
         #define RTE_VIO_BOARD
